@@ -1,0 +1,44 @@
+import pandas as pd 
+import numpy as np 
+import matplotlib.pyplot as plt 
+import seaborn as se 
+%matplotlib inline
+
+
+df = se.load_dataset('titanic')
+
+df
+
+df.dropna()
+
+df.columns
+
+se.distplot(df['fare'])
+plt.show()
+
+se.jointplot(x='age',y='fare',data=df)
+
+se.jointplot(x='age',y='fare',data=df,kind='hex')
+
+se.pairplot(df)
+
+se.pairplot(df,hue = 'age')
+
+se.rugplot(df['fare'])
+
+se.barplot(x='sex',y='age',data = df)
+
+se.countplot(x='sex',data=df)
+
+se.boxplot(x='sex',y='age',data=df)
+
+se.boxplot(x='sex',y='age',data=df ,hue = 'survived') 
+
+se.violinplot(x='sex',y='age',data=df)
+
+se.violinplot(x='sex',y='age',data=df,hue='survived')
+
+se.swarmplot(x='sex',y='age',data=df,hue='survived')
+
+se.violinplot(x='sex',y='age',data=df)
+se.swarmplot(x='sex',y='age',data=df,color='black')

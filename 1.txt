@@ -1,0 +1,45 @@
+import pandas as pd
+
+
+import seaborn as sns
+df = sns.load_dataset('titanic')
+
+
+df
+
+
+df.isnull().sum()
+
+
+df.describe()
+
+
+df.shape
+
+
+df.dtypes
+
+
+df['sex'].astype('category')
+df['embarked'].astype('category')
+
+
+df['fare'].std()
+
+
+df['fare'].sum()
+
+
+df['fare'].mean()
+
+
+df['fare'].median()
+
+
+df['fare'].mode()
+
+
+df.isnull()
+
+
+df.isnull().sum()

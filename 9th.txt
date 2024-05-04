@@ -1,0 +1,33 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as se 
+%matplotlib inline
+
+df = se.load_dataset("titanic")
+
+df
+
+df.dropna()
+
+df.columns
+
+se.countplot(df['survived'])
+plt.show()
+
+df['sex'].value_counts().plot(kind="pie",autopct="%.2f")
+
+plt.hist(df['age'],bins=5)
+plt.show()
+
+se.distplot(df['age'])
+plt.show()
+
+se.barplot(x='pclass',y='age',data=df)
+
+se.barplot(x='pclass',y='fare',hue ='sex',data=df)
+plt.show()
+
+se.boxplot(x='sex',y='age',data=df)
+
+se.boxplot(x='sex',y='age',data=df,hue='survived')

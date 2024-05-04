@@ -1,0 +1,45 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df=sns.load_dataset('Iris')
+
+
+df
+
+
+df.head()
+
+
+df.tail()
+
+
+df.info()
+
+
+df.describe()
+
+
+df.dtypes
+	
+
+df.sepal_length.mean()
+
+
+df.sepal_width.median()
+
+
+df.petal_width.mode()
+
+
+df.petal_length.sum()
+
+
+grdf= df.groupby(by='species')
+
+
+grdf.mean()
+
+
+grdf.sepal_length.mean()
